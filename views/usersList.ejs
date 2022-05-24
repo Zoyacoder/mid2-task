@@ -1,0 +1,31 @@
+<html lang="en">
+    <head>
+        <title>Show List</title>
+    </head>
+    <body>
+        <table>
+            <input type="checkbox">
+            <tr> 
+                <thead>Name</thead>
+                <thead>Email</thead>
+                <thead>Phone</thead>
+                <thead>City</thead>
+                <thead>Post Code</thead>
+            </tr>
+
+            <tr>
+                <% for(let i=0; i<users.length; i++) { %>
+                    <%= users[i].fullname
+                    users[i].email
+                    users[i].phone
+                    users[i].city
+                    users[i].zip
+                    %>
+                    <button type="submit" name="update" >Update</button>
+                    <button type="submit"><a href="/delete/<%= users[i]._id%>"></a>Delete</button>
+                    <br>
+                <% } %>
+            </tr>
+        </table>
+    </body>
+</html>
